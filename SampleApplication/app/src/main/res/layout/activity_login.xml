@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright © 2016 CyberSource. All rights reserved.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:id="@+id/login_background_view"
+    android:animateLayoutChanges="true"
+    android:background="@color/background_light_blue"
+    android:gravity="center"
+    android:transitionName="@string/transition_expand_header_to_swipe_background">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/logo_image_view"
+        android:background="@drawable/cybersource"
+        android:layout_marginBottom="50dp"
+        android:visibility="invisible"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/merchant_id_text_view"
+        android:hint="@string/merchant_id_hint"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white"
+        android:visibility="gone"
+        android:padding="5dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/password_text_view"
+        android:layout_gravity="center_horizontal"
+        android:hint="@string/password_hint"
+        android:layout_marginBottom="20dp"
+        android:background="@color/white"
+        android:padding="5dp"
+        android:visibility="gone"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/login_button"
+        android:transitionName="fab"
+        android:background="@color/visa_action_golden"
+        android:text="@string/login_button"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:id="@+id/forgot_linear_layout"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/forgot_merchant_id"
+            android:textColor="@color/white"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/copyright_linear_layout"
+        android:orientation="vertical"
+        android:gravity="bottom"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/terms_and_conditions"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rights_reserved_visa_inc"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

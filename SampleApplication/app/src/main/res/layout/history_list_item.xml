@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright © 2016 CyberSource. All rights reserved.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="15dp"
+    android:paddingLeft="6dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="15dp">
+
+    <ImageView
+        android:id="@+id/directionImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/abc_btn_check_material"/>
+
+    <TextView
+        android:id="@+id/price_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/directionImageView"
+        android:layout_toRightOf="@+id/directionImageView"
+        android:layout_marginLeft="5dp"
+        android:text="$506700.88"
+        android:textColor="@color/darkgreen"
+        android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+    <TextView
+        android:id="@+id/transaction_id_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/price_text_view"
+        android:layout_toEndOf="@+id/directionImageView"
+        android:layout_toRightOf="@+id/directionImageView"
+        android:layout_marginLeft="5dp"
+        android:text="Transaction ID"
+        android:textSize="14sp"
+        android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+    <TextView
+        android:id="@+id/timestamp_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/transaction_id_text_view"
+        android:layout_toEndOf="@+id/directionImageView"
+        android:layout_toRightOf="@+id/directionImageView"
+        android:layout_marginLeft="5dp"
+        android:text="Date and Time"
+        android:textAppearance="?android:attr/textAppearanceSmall"/>
+    <TextView
+        android:id="@+id/status_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timestamp_text_view"
+        android:layout_toEndOf="@+id/directionImageView"
+        android:layout_toRightOf="@+id/directionImageView"
+        android:layout_marginLeft="5dp"
+        android:text="Status"
+        android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+    <TextView
+        android:id="@+id/refunded_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="3dp"
+        android:padding="4dp"
+        android:textColor="@color/white"
+        android:text="Refunded"
+        android:textSize="16sp"
+        android:background="@color/darkgreen"
+        android:visibility="invisible"
+        android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+</RelativeLayout>

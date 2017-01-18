@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright © 2016 CyberSource. All rights reserved.
+  -->
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="@string/pref_general_title"
+        android:key="@string/pref_general_key">
+
+        <CheckBoxPreference
+            android:key="@string/pref_signature_key"
+            android:title="@string/pref_signature_title"
+            android:defaultValue="true"
+            android:switchTextOn="@string/switch_on"
+            android:switchTextOff="@string/switch_off"
+            android:widgetLayout="@layout/lollipop_switch"/>
+        />
+
+        <CheckBoxPreference
+            android:key="@string/pref_tax_key"
+            android:title="@string/pref_tax_title"
+            android:defaultValue="false"
+            android:switchTextOn="@string/switch_on"
+            android:switchTextOff="@string/switch_off"
+            android:widgetLayout="@layout/lollipop_switch"/>
+
+            <com.visa.ent.mpos.preferences.SeekBarPreference
+                android:key="@string/pref_tax_percentage_key"
+                android:dependency="@string/pref_tax_key"
+                android:max="19"
+                android:summary="@string/pref_tax_percentage_summary"
+                android:title="@string/pref_tax_percentage_title"
+                android:text="@string/pref_tax_percentage_summary"
+                android:defaultValue="9"
+                defaultValueDecimal="8"
+                maxDecimal="9"
+                android:dialogMessage="@string/pref_tax_percentage_dialog_summary"/>
+
+        <CheckBoxPreference
+            android:key="@string/pref_tip_key"
+            android:title="@string/pref_tip_title"
+            android:defaultValue="false"
+            android:switchTextOn="@string/switch_on"
+            android:switchTextOff="@string/switch_off"
+            android:widgetLayout="@layout/lollipop_switch"/>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title = "@string/pref_account_title"
+        android:key = "@string/pref_account_key">
+        <ListPreference
+            android:key="@string/pref_environment_key"
+            android:title="@string/pref_environment_title"
+            android:summary="@string/pref_environment_summary"
+            android:entries="@array/environmentkey"
+            android:entryValues="@array/environmentvalues" />
+        <EditTextPreference
+            android:key="@string/pref_merchantId_key"
+            android:title="@string/pref_merchantId_title"
+            android:summary="@string/pref_merchantId_summary"
+            android:dialogTitle="@string/pref_merchantId_dialog_title"/>
+        <EditTextPreference
+            android:key="@string/pref_deviceId_key"
+            android:title="@string/pref_deviceId_title"
+            android:summary="@string/pref_deviceId_summary"
+            android:dialogTitle="@string/pref_deviceId_dialog_title"/>
+        <EditTextPreference
+            android:key="@string/pref_clientId_key"
+            android:title="@string/pref_clientId_title"
+            android:summary="@string/pref_clientId_summary"
+            android:dialogTitle="@string/pref_clientId_dialog_title"/>
+        <EditTextPreference
+            android:key="@string/pref_clientSecret_key"
+            android:title="@string/pref_clientSecret_title"
+            android:summary="@string/pref_clientSecret_summary"
+            android:dialogTitle="@string/pref_clientSecret_dialog_title"/>
+        <EditTextPreference
+            android:key="@string/pref_username_key"
+            android:title="@string/pref_username_title"
+            android:summary="@string/pref_username_summary"
+            android:dialogTitle="@string/pref_username_dialog_title"/>
+        <EditTextPreference
+            android:key="@string/pref_password_key"
+            android:title="@string/pref_password_title"
+            android:summary="@string/pref_password_summary"
+            android:dialogTitle="@string/pref_password_dialog_title"/>
+        <EditTextPreference
+            android:key="@string/pref_token_key"
+            android:title="@string/pref_token_title"
+            android:summary="@string/pref_token_summary"
+            android:dialogTitle="@string/pref_token_dialog_title"/>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/pref_terminal_title"
+        android:key="@string/pref_terminal_key">
+        <EditTextPreference
+            android:key="@string/pref_terminalId_key"
+            android:title="@string/pref_terminalId_title"
+            android:summary="@string/pref_terminalId_summary"
+            android:dialogTitle="@string/pref_terminalId_dialog_title"/>
+        <EditTextPreference
+            android:key="@string/pref_terminalIdAlternate_key"
+            android:title="@string/pref_terminalIdAlternate_title"
+            android:summary="@string/pref_terminalIdAlternate_summary"
+            android:dialogTitle="@string/pref_terminalIdAlternate_dialog_title"/>
+        <EditTextPreference
+            android:key="@string/pref_mid_key"
+            android:title="@string/pref_mid_title"
+            android:summary="@string/pref_mid_summary"
+            android:dialogTitle="@string/pref_mid_dialog_title"/>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/pref_ui_settings_title"
+        android:key="@string/pref_ui_settings_key">
+        <EditTextPreference
+            android:key="@string/pref_spinner_color_key"
+            android:title="@string/pref_spinner_color_title"
+            android:summary="@string/pref_spinner_color_summary"
+            android:dialogTitle="@string/pref_spinner_color_dialog_title"/>
+        <EditTextPreference
+            android:key="@string/pref_textLabel_color_key"
+            android:title="@string/pref_textLabel_color_title"
+            android:summary="@string/pref_textLabel_color_summary"
+            android:dialogTitle="@string/pref_textLabel_color_dialog_title"/>
+        <EditTextPreference
+            android:key="@string/pref_detailLabel_color_key"
+            android:title="@string/pref_detailLabel_color_title"
+            android:summary="@string/pref_detailLabel_color_summary"
+            android:dialogTitle="@string/pref_detailLabel_color_dialog_title"/>
+        <EditTextPreference
+            android:key="@string/pref_textField_color_key"
+            android:title="@string/pref_textField_color_title"
+            android:summary="@string/pref_textField_color_summary"
+            android:dialogTitle="@string/pref_textField_color_dialog_title"/>
+        <EditTextPreference
+            android:key="@string/pref_placeHolder_color_key"
+            android:title="@string/pref_placeHolder_color_title"
+            android:summary="@string/pref_placeHolder_color_summary"
+            android:dialogTitle="@string/pref_placeHolder_color_dialog_title"/>
+        <EditTextPreference
+            android:key="@string/pref_signature_color_key"
+            android:title="@string/pref_signature_color_title"
+            android:summary="@string/pref_signature_color_summary"
+            android:dialogTitle="@string/pref_signature_color_dialog_title"/>
+        <EditTextPreference
+            android:key="@string/pref_background_color_key"
+            android:title="@string/pref_background_color_title"
+            android:summary="@string/pref_background_color_summary"
+            android:dialogTitle="@string/pref_background_color_dialog_title"/>
+        <EditTextPreference
+            android:key="@string/pref_image_url_key"
+            android:title="@string/pref_image_url_title"
+            android:summary="@string/pref_image_url_summary"
+            android:dialogTitle="@string/pref_image_url_dialog_title"/>
+        <ListPreference
+            android:key="@string/pref_font_family_key"
+            android:title="@string/pref_font_family_title"
+            android:summary="@string/pref_font_family_summary"
+            android:entries="@array/fontfamilykey"
+            android:entryValues="@array/fontfamilyvalues" />
+        <ListPreference
+            android:key="@string/pref_font_style_key"
+            android:title="@string/pref_font_style_title"
+            android:summary="@string/pref_font_style_summary"
+            android:entries="@array/fontstylekey"
+            android:entryValues="@array/fontstylevalues" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/pref_about_title"
+        android:key="@string/pref_about_key">
+
+        <Preference android:title="@string/pref_privacy_title" >
+            <intent android:action="android.intent.action.VIEW"
+                android:data="http://www.cybersource.com/privacy/" />
+        </Preference>
+        <Preference android:title="@string/pref_help_title" >
+            <intent android:action="android.intent.action.VIEW"
+                android:data="http://support.cybersource.com/cybskb/index?page=home" />
+        </Preference>
+    </PreferenceCategory>
+</PreferenceScreen>

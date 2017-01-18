@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright © 2016 CyberSource. All rights reserved.
+  -->
+
+<resources>
+    <string name="transition_item_name_to_swipe">nameToSwipe</string>
+    <string name="transition_expand_header_to_swipe_background">expandBackground</string>
+    <string name="transition_toolbar">toolbarToToolbar</string>
+    <string name="transition_fab_mini">fab_mini</string>
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright © 2016 CyberSource. All rights reserved.
+  -->
+
+<array>
+    <!--<string>com.visainc.mpos.driverhelper.idtech.IdTechDriver</string>-->
+    <string>com.visainc.mpos.driver.idtech.IdTechDriver</string>
+<!--	<string>com.visainc.mpos.drivers.miura.MiuraSystemDriver</string>
+
+    &lt;!&ndash; My custom Dummy Reader Driver &ndash;&gt;
+    <string>com.visainc.mpos.mytestapplication.device.DummyReaderDriver</string>-->
+
+    <!--<string>com.visainc.mpos.drivers.posmate.PosMateSmart211Driver</string>-->
+</array>

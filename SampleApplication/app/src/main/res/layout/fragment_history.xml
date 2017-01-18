@@ -1,0 +1,53 @@
+<!--
+  ~ Copyright © 2016 CyberSource. All rights reserved.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainLayout"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/history_recycler_view"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".SearchFragment" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <LinearLayout
+    android:id="@+id/empty_history_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:layout_marginTop="50dp"
+    android:orientation="vertical"
+    >
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/add_new_item_image"
+        android:background="@drawable/ic_view_list_grey600_48dp"
+        android:backgroundTint="@color/lighter_gray" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_history_transactions"
+        android:textSize="24sp"
+        android:textColor="@color/lighter_gray"/>
+
+    </LinearLayout>
+</RelativeLayout>

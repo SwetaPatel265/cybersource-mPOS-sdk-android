@@ -1,0 +1,142 @@
+<!--
+  ~ Copyright © 2016 CyberSource. All rights reserved.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.visa.ent.mpos.AddItemActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/activity_transition_header"
+        android:orientation="vertical"
+        android:background="@color/background_light_blue"
+        android:paddingLeft="72dp"
+        android:paddingRight="16dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="34sp"
+            android:id="@+id/item_name_edit_text"
+            android:padding="10dp"
+            android:layout_marginRight="5dp"
+            android:hint="@string/hint_item_name"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:fontFamily="sans-serif-medium"
+            android:maxLines="1"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_name_edit_text"
+            android:textSize="34sp"
+            android:id="@+id/item_price_edit_text"
+            android:layout_marginRight="5dp"
+            android:padding="10dp"
+            android:hint="@string/hint_item_price"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:fontFamily="sans-serif-medium"
+            android:inputType="numberDecimal"
+            android:maxLines="1"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:orientation="vertical"
+        android:layout_below="@id/activity_transition_header">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Controls"
+        android:textColor="@color/visa_toolbar_blue"
+        android:gravity="center_vertical"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/quantity_edit_text"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:maxLines="1"
+            android:inputType="number"
+            android:hint="1"
+            android:textAlignment="center"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="7"
+            android:layout_height="wrap_content"
+            android:text="Quantity"
+            android:layout_marginLeft="16dp"
+            android:layout_gravity="center_vertical"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Notes"
+        android:textColor="@color/visa_toolbar_blue"
+        android:gravity="center_vertical"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        >
+
+        <CheckBox
+            android:id="@+id/theme_check"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="7"
+            android:layout_height="wrap_content"
+            android:text="Awesome"
+            android:layout_marginLeft="16dp"
+            android:layout_gravity="center_vertical"/>
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/fab_button"
+        android:transitionName="fab"
+        android:layout_width="@dimen/fab_size"
+        android:layout_height="@dimen/fab_size"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:stateListAnimator="@anim/fab_anim"
+        android:elevation="4dp"
+        android:layout_below="@+id/activity_transition_header"
+        android:layout_marginTop="-26dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_add_shopping_cart_white_24dp"
+        />
+
+</RelativeLayout>

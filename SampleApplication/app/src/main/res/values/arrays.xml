@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright © 2016 CyberSource. All rights reserved.
+  -->
+
+<resources>
+    <string-array name="environmentkey">
+        <item>LIVE</item>
+        <item>TEST</item>
+    </string-array>
+    <string-array name="environmentvalues">
+        <item>LIVE</item>
+        <item>TEST</item>
+    </string-array>
+    <string-array name="fontfamilykey">
+        <item>SERIF</item>
+        <item>SANS_SERIF</item>
+        <item>MONOSPACE</item>
+    </string-array>
+    <string-array name="fontfamilyvalues">
+        <item>SERIF</item>
+        <item>SANS_SERIF</item>
+        <item>MONOSPACE</item>
+    </string-array>
+    <string-array name="fontstylekey">
+        <item>BOLD</item>
+        <item>BOLD_ITALIC</item>
+        <item>ITALIC</item>
+        <item>NORMAL</item>
+    </string-array>
+    <string-array name="fontstylevalues">
+        <item>BOLD</item>
+        <item>BOLD_ITALIC</item>
+        <item>ITALIC</item>
+        <item>NORMAL</item>
+    </string-array>
+</resources>

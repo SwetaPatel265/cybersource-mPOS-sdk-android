@@ -1,0 +1,124 @@
+<!--
+  ~ Copyright © 2016 CyberSource. All rights reserved.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainLayout"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/reveal_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/visa_toolbar_blue"
+        android:elevation="5dp"
+        android:visibility="invisible"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/activity_transition_header"
+        android:orientation="vertical"
+        android:transitionName="@string/transition_expand_header_to_swipe_background"
+        android:background="@color/background_light_blue"
+        android:paddingLeft="72dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="30dp">
+        <!--android:elevation="@dimen/appbar_elevation"-->
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/item_name_edit_text">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="34sp"
+                android:layout_marginRight="5dp"
+                android:hint="@string/hint_item_name"
+                android:fontFamily="sans-serif-medium"
+                android:maxLines="1"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/item_price_edit_text">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="34sp"
+                android:layout_marginRight="5dp"
+                android:padding="10dp"
+                android:hint="@string/hint_item_price"
+                android:fontFamily="sans-serif-medium"
+                android:inputType="numberDecimal"
+                android:maxLines="1"/>
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/item_cards_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/activity_transition_header" />
+
+    <LinearLayout
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        android:layout_below="@id/activity_transition_header">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/add_new_item_image"
+            android:background="@drawable/ic_add_shopping_cart_grey600_48dp"
+            android:backgroundTint="@color/lighter_gray" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lets_start_shopping"
+            android:textSize="24sp"
+            android:textColor="@color/lighter_gray"/>
+
+    </LinearLayout>
+
+
+    <include
+        android:id="@+id/view_fab_checkout_button"
+        layout="@layout/view_fab_button"
+        android:transitionName="fab"
+        />
+
+
+
+    <android.support.design.widget.FloatingActionButton
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/view_fab_add_button"
+        android:transitionName="@string/transition_fab_mini"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activity_transition_header"
+        android:src="@drawable/fab_ic_add"
+        style="@style/floating_action_button_mini"
+        app:fabSize="mini"
+        app:borderWidth="0dp"/>
+        <!--app:elevation="@dimen/fab_elevation" -->
+
+
+</RelativeLayout>
